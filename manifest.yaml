@@ -1,0 +1,16 @@
+---
+applications:
+  - name: training-register-approuter
+    routes:
+      - route: approuter-training-register.cfapps.eu10.hana.ondemand.com
+    memory: 128M
+    disk_quota: 1024M
+    path: .
+    buildpack: nodejs_buildpack
+    env:
+      destinations: >
+        [
+          {"name":"frontend", "url" :"https://training_register.cfapps.eu10.hana.ondemand.com"}
+        ]
+    services:
+      - training-register-dest

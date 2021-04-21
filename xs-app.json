@@ -1,0 +1,15 @@
+{
+    "authenticationMethod": "none",
+    "routes": [
+        {
+            "source": "^/ias/(.*)",
+            "target": "/$1",
+            "destination": "sapid"
+        },
+        {
+        "source": "/",
+        "target": "/",
+        "destination": "frontend"
+        }
+    ]
+}
